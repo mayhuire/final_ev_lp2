@@ -12,9 +12,16 @@ OUTPUT_FILE = DATA_DIR / "report.csv"
 
 def load_data():
     try:
-        facts = pd.read_csv(FACT_CHECKS_FILE)
-        sources = pd.read_csv(SOURCES_FILE)
+        facts = pd.read_csv(FACT_CHECKS_FILE, encoding="utf-8", sep=",")
+        sources = pd.read_csv(SOURCES_FILE, encoding="utf-8", sep=",")
         print(f"Cargados {len(facts)} fact-checks y {len(sources)} fuentes.")
+        # --- Nuevas líneas de depuración interna ---
+        print("Columnas de facts:", facts.columns.tolist())
+        print("Primeras filas de facts:")
+        print(facts.head())
+        print("Tipos de datos de facts:")
+        print(facts.dtypes)
+        # ------------------------------------------
         return facts, sources
     except FileNotFoundError as e:
         print(f"Error: {e}. Asegúrate de ejecutar primero los scrapers.")
@@ -59,6 +66,7 @@ def main():
     
     merged.to_csv(OUTPUT_FILE, index=False)
     print(f"Reporte guardado en {OUTPUT_FILE}")
+
 
 if __name__ == "__main__":
     main()
