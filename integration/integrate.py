@@ -37,6 +37,9 @@ def main():
     merged = pd.merge(facts, sources, left_on="origin_domain_clean",
                       right_on="domain_clean", how="left", suffixes=("", "_mbfc"))
     merged.drop(columns=["domain_clean"], inplace=True, errors="ignore")
+    
+    merged["rating"] = merged["rating"].fillna("").astype(str)
+    merged["factual_reporting"] = merged["factual_reporting"].fillna("").astype(str)
 
     # Métrica principal
     false_ratings = ["False", "Mostly False"]

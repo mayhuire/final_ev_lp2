@@ -1,4 +1,5 @@
-﻿domain,bias,factual_reporting
-"curasfalsas.com,""Conspiracy"",""LOW"""
-"antivacunas.net,""Questionable"",""VERY LOW"""
-"saludnatural.info,""Left"",""HIGH"""
+domain,bias,factual_reporting
+curasfalsas.com,Conspiracy,LOW
+antivacunas.net,Questionable,VERY LOW
+saludnatural.info,Left,HIGH
+fakehealthnews.org,Fake News,VERY LOW
