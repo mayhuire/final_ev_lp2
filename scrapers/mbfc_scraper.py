@@ -1,3 +1,9 @@
+# ==========================================
+# Scraper de Media Bias Fact Check (MBFC)
+# Obtiene información sobre el sesgo político
+# y el nivel de factualidad de distintos medios
+# para su posterior integración con los fact-checks.
+# ==========================================
 # scrapers/mbfc_scraper.py
 import requests
 from bs4 import BeautifulSoup
@@ -169,6 +175,7 @@ def main():
         print(df.to_string())
     else:
         print("\n❌ No se encontraron fuentes.")
-
+        
+# Punto de inicio del programa.
 if __name__ == "__main__":
     main()
