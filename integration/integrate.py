@@ -1,9 +1,4 @@
 # integration/integrate.py
-# ==========================================
-# Integración de datos obtenidos mediante web scraping
-# Este script une la información proveniente de Snopes
-# y Media Bias Fact Check para generar un reporte final.
-# ==========================================
 import pandas as pd
 import tldextract
 from pathlib import Path
@@ -53,10 +48,8 @@ def main():
     merged["rating"] = merged["rating"].fillna("").astype(str)
     merged["factual_reporting"] = merged["factual_reporting"].fillna("").astype(str)
 
-# Cálculo de la métrica principal:
-# Determina cuántos fact-checks clasificados como falsos
-# provienen de fuentes con baja credibilidad.
-    false_ratings = ["False", "Mostly False"]
+    # Métrica principal
+    false_ratings = ["False", "Mostly False", "Fake", "Miscaptioned", "Incorrect Attribution", "Mixture"]
     low_cred = ["LOW", "VERY LOW"]
     is_false = merged["rating"].str.upper().isin([r.upper() for r in false_ratings])
     has_domain = merged["origin_domain_clean"].notna()
