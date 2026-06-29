@@ -56,7 +56,7 @@ python integration/integrate.py
 - `report.csv`: resultado de la integración y análisis de los datos.
 
 ## Integrantes
-- Jeremi
-- Juan
-- Bisitte
-- Andy
+- Jeremi angel, Mayhuire Calle (usuario en GitHub : mayhuire)
+- Juan Carlos, Tapia Casa (usuario en GitHub : 20221418-crypto)
+- Bisitte Milagros, Becerra Jesus (usuario en GitHub : Bisitte20)
+- Andy Weber, Potosino Apaza (usuario en GitHub : skinsz20)
