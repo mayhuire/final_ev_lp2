@@ -27,8 +27,8 @@ integration/
 │── integrate.py: Carga ambos archivos y usa la librería tldextract para limpiar y estandarizar los dominios (quitando https:// o www.). Luego, mediante la función merge de Pandas, une los datos por dominio.
 
 scrapers/
-│── snopes_scraper.py: Extrae las últimas verificaciones de Snopes. Utiliza las estructuras JSON-LD (ClaimReview) ocultas en el HTML para capturar la afirmación (claim), el veredicto (rating), la fecha, la categoría y el dominio de origen. Guarda todo en fact_checks.csv.
-│── mbfc_scraper.py: Extrae de MBFC el dominio del medio, su orientación política (bias) y su nivel de veracidad (factual reporting). Limpia duplicados y guarda en sources.csv.
+│── snopes_scraper.py: Extrae las últimas verificaciones de Snopes. Utiliza las estructuras JSON-LD (ClaimReview) ocultas en el HTML para capturar la afirmación (claim), el veredicto (rating), la fecha, la categoría y el dominio de origen.
+│── mbfc_scraper.py: Extrae de MBFC el dominio del medio, su orientación política (bias) y su nivel de veracidad (factual reporting), limpiando duplicados.
 ```
 
 ## Archivos generados
